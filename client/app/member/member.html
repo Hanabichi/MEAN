@@ -1,0 +1,16 @@
+<div ng-controller="MemberCtrl">
+  <h2>メンバー登録</h2>
+  <form >
+    <legend>メンバー登録</legend>
+    <label>名前</label>
+    <input type="text" id="name" name="name" ng-model="member.name">
+    <button class="btn btn-primary" ng-click="createMember()">登録</button>
+  </form>
+
+  <h2>メンバー一覧</h2>
+  <ul>
+    <li ng:repeat="member in members">
+      {{member.name}}
+    </li>
+  </ul>
+</div>
